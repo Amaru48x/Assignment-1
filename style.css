@@ -1,6 +1,11 @@
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
+.card {
+    position:relative;
+    right:20px;
+    width: 340px;
+    text-align: center;
+    margin: 80px auto 0;
+    padding: 1.5em;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  }
