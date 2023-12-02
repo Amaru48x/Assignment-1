@@ -1,6 +1,51 @@
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    height: 10vh;
 }
+
+.logo {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+ul{list-style: none;}
+
+.flex-container
+   {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+
+   }
+
+.flex-container > li
+   {
+  background-color: #fffada;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+   }
+
+  @media screen and (max-width: 576px) {
+
+  .flex-container{
+    flex-wrap:wrap  
+    }
+
+  .flex-container > li
+
+    {
+    background-color: rgb(76, 81, 121)
+    width: 100px;
+    margin: 20px;
+    padding: 20px;
+    text-align:center;
+    line-height: 75px;
+    font-size: 30px;
+    }
+  }
