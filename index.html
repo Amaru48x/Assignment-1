@@ -24,44 +24,66 @@
                 margin: 0;
                 padding: 0;
                 background-color: #fff;
-            }
+                }
+            
             header {
                 font-family: 'Lato', sans-serif;
                 background-color: #d6c9b1;
                 color: #000;
                 text-align: center;
-                padding: 1em 0;
-            }
+                padding: 0.5em 0;
+                }
+
             nav {
                 background-color: #f4f4f4;
                 color: #000;
                 text-align: center;
                 padding: 0.5em 0;
-            }
+                }
+
             nav a {
                 color: #000;
                 text-decoration: none;
                 padding: 0 1em;
-            }
+                }
+
             main {
-                padding: 1em;
-            }
+                padding: 3em;
+                }
+
             footer {
                 background-color: #d6c9b1;
                 color: #000;
                 text-align: center;
                 padding: 1em 0;
-            }
+                }
 
+            .slider {
+                width: 1800px;
+                height: 1200px; /* Set the height of your slider */
+                margin: auto;
+                text-align: right;
+                overflow: hidden;
+                display: flex;
+                justify-content: right;
+                }
+                    
+            .slide {
+                min-width: 1800px;
+                transition: transform 0.5s ease-in-out;
+                }
+                    
+            img {
+                width: 1800px;
+                 height: auto;
+                object-fit: cover;
+                }
         </style>
-
-
+            
     </head>
 
 
     <body>
-
-
         <header>
             <h1>Welcome to McDonalds. <br>
                 The one stop shop for all your fast food cravings!</h1>
@@ -85,8 +107,35 @@
 
         <main>           
             <ul class="flex-container">
-                <li class="flex-item">1</li>
-                <li class="flex-item">2</li>
+                <li class="flex-item">
+                    <div class="slider">
+            
+                        <div class="slide">
+                            <img src="images/Screenshot (63).png" alt="Image 1"
+                            width= 1800px;
+                            height= 1200px; />
+                        </div>
+        
+                        <div class="slide">
+                            <img src="images/Screenshot (64).png" alt="Image 2"
+                            width= 1800px;
+                            height= 1200px; />
+                        </div>
+        
+                        <div class="slide">
+                            <img src="images/Screenshot (65).png" alt="Image 3"
+                            width= 1800px;
+                            height= 1200px; />
+                        </div>
+        
+                        <div class="slide">
+                            <img src="images/Screenshot (66).png" alt="Image 3"
+                            width= 1800px;
+                            height= 1200px; />
+                        </div>
+        
+                    </div>
+                </li>
             </ul>
         </main>
 
@@ -98,3 +147,25 @@
         <script src= "script.js"></script>
     </body>
 </html>
+
+<script>
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+
+    let counter = 1;
+
+    setInterval(() => {
+        slider.style.transition = 'transform 0.2s ease-in-out';
+        slider.style.transform = `translateX(${-counter * 150}%)`;
+
+        counter++;
+
+        if (counter === slides.length) {
+            counter = 0;
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                slider.style.transform = 'translateX(0)';
+            }, 500);
+        }
+    }, 1000); /* Change slide every 1 second (adjust as needed) */
+</script>
