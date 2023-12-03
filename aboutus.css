@@ -33,20 +33,20 @@ ul{list-style: none;}
   font-size: 24px;
    }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 1440px) {
 
   .flex-container{
-    flex-wrap:wrap  
+    flex-wrap: wrap;
+    margin: auto;  
     }
 
   .flex-container > li
-
     {
     background-color: rgb(76, 81, 121);
     width: 100px;
     margin: 20px;
     padding: 20px;
-    text-align:center;
+    text-align: center;
     line-height: 75px;
     font-size: 30px;
     }
